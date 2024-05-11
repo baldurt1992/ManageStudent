@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/index.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <ul>
+                <li id="manage-notes">Ver notas</li>
+                <li id="manage-students">Gestionar estudiantes</li>
+                <li id="create-student">Crear estudiante</li>
+            </ul>
+        </aside>
+
+        <main id="main-content">
+            <section id="student-info">
+                <div id="default-text">
+                    <h1>Gestión de estudiantes</h1>
+                    <span>Selecciona una opción</span>
+                </div>
+                <h2 id="main-title"></h2>
+                <div id="table-data"></div>
+                <div id="pagination-btn" class="pagination-buttons">
+                    <button id="back">Anterior</button>
+                    <span></span>
+                    <button id="next">Siguiente</button>
+                </div>
+
+                <div class="form-create" id="form-container">
+                    <form id="create-student-form" class="form-effect">
+                        <div class="input-text">
+                            <div id="doc-input" class="input-column">
+                                <label for="student-doc">Documento</label>
+                                <input type="text" name="student-doc" id="student-doc" required pattern="[0-9]+"
+                                    title="Ingrese solo números" tabindex="0">
+                            </div>
+                            <div id="name-input" class="input-column">
+                                <label for="student-name">Nombre</label>
+                                <input type="text" name="student-name" id="student-name" required
+                                    pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" title="Ingrese solo letras" tabindex="0">
+                            </div>
+                        </div>
+                        <div id="notes-input" class="notes-input">
+                            <p class="notes-title">Notas</p>
+                            <input type="number" name="notes" id="note1" required title="Ingrese la nota 1"
+                                tabindex="0">
+                            <input type="number" name="notes" id="note2" required title="Ingrese la nota 2"
+                                tabindex="0">
+                            <input type="number" name="notes" id="note3" required title="Ingrese la nota 3"
+                                tabindex="0">
+                        </div>
+                        <button type="button" id="add-student-button">Crear</button>
+                        <h3 id="create-student-successful"></h3>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <script type="module" src="/public/script.js"></script>
+
+</body>
+
+</html>

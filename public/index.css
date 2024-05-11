@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Chakra Petch",
+        sans-serif;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    ;
+    ;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "sidebar main";
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    position: fixed;
+    width: 8%;
+    height: 70%;
+    border-radius: 15px;
+    border: 2px solid #2c2c54;
+    margin: 0 0 0 2%;
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: 1px 0px 37px -7px rgba(0, 0, 0, 0.55);
+}
+
+#sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 0;
+    justify-content: flex-start;
+
+}
+
+#sidebar li {
+    display: flex;
+    width: 7vw;
+    height: 7vw;
+    background-color: rgb(253, 253, 253);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #2c2c54;
+    padding: 8px;
+    font-weight: 500;
+    line-height: 1.5em;
+    font-size: 1vw;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.5s ease, color 0.3s ease;
+    overflow: hidden;
+    box-shadow: 2px 2px 15px -7px rgba(0, 0, 0, 0.75);
+}
+
+#sidebar li:hover {
+    transform: translateY(-5px);
+    color: white;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+#main-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    grid-area: main;
+    width: 94%;
+    margin: 0 0 0 0;
+    height: 84.5%;
+    max-height: 84.5%;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: white;
+    background-color: white;
+}
+
+
+#main-content h2 {
+    font-size: 2vw;
+    text-align: center;
+    margin: 0 0 2% 0;
+    color: #2c2c54;
+}
+
+.students-table {
+    width: 100%;
+    border: 1px solid white;
+    margin-bottom: 4%;
+    border-collapse: collapse;
+}
+
+.students-table table {
+    border-radius: 20px;
+}
+
+.students-table th,
+.students-table td {
+    padding: 0.5%;
+    height: auto;
+    max-width: 20%;
+}
+
+.students-table th {
+    background-color: #2c2c54;
+    color: white;
+    text-align: center;
+    font-size: 1.2vw;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.students-table td {
+    color: black;
+    text-align: center;
+    font-size: 0.8vw;
+    border: 1px solid white;
+}
+
+.students-table tr:nth-child(even) td {
+    background-color: #40407a;
+    color: white;
+}
+
+.students-table tr:nth-child(odd) td {
+    background-color: #2e2e5a;
+    color: white;
+}
+
+#student-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    overflow: hidden;
+    max-height: calc(100% - 10vh);
+}
+
+.pagination-buttons {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    bottom: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 6vh;
+}
+
+.pagination-buttons span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8vw;
+    width: 4vw;
+    color: #2c2c54;
+    font-weight: 500;
+}
+
+.pagination-buttons button {
+    width: 5vw;
+    height: 5vh;
+    font-family: "Chakra Petch",
+        sans-serif;
+    border: none;
+    background-color: #36269c;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.7vw;
+}
+
+#sidebar li.selected {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    color: white;
+}
+
+#default-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+    color: #24243e3b;
+}
+
+#student-doc::placeholder {
+    color: red;
+    font-size: 16px;
+}
+
+#student-name::placeholder {
+    color: red;
+    font-size: 16px;
+}
+
+#note1::placeholder {
+    color: red;
+    font-size: 16px;
+}
+
+#note2::placeholder {
+    color: red;
+    font-size: 16px;
+}
+
+#note3::placeholder {
+    color: red;
+    font-size: 16px;
+}
+
+.form-create {
+    margin: 2% 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#create-student-form {
+    flex-direction: column;
+    gap: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-create input {
+    width: 29vw;
+    height: 4vh;
+    border: 1px solid #243b55;
+    border-radius: 3px;
+    box-shadow: 0px 0px 12px -8px rgba(0, 0, 0, 0.75);
+    font-size: 1vw;
+    outline: none;
+}
+
+.form-create p {
+    color: #2c2c54;
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+.form-effect {
+    animation: rebound 0.5s ease;
+}
+
+.red-border input {
+    border-color: red;
+}
+
+@keyframes rebound {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.form-create input:focus {
+    transition: outline 0.3s ease;
+}
+
+.form-create input:focus {
+    color: #2c2c54;
+    border: 1px solid #706fd3;
+}
+
+.form-create label {
+    color: #2c2c54;
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+.form-create button {
+    width: 12vw;
+    height: 6vh;
+    font-family: "Chakra Petch",
+        sans-serif;
+    border: none;
+    background-color: #36269c;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.8vw;
+    transition: background-color 0.3s ease;
+    margin-top: 4%;
+}
+
+.form-create button:hover {
+    background-color: #21195a;
+}
+
+.input-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.notes-input {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.notes-title {
+    text-align: center;
+    margin: 0 0 4% 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.action-cell {
+    width: 10%;
+    max-width: 10%;
+    padding: 0;
+}
+
+.students-table td.document-cell,
+.students-table td.name-cell {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.edit-icon {
+    position: static;
+    margin-right: 1vw;
+    cursor: pointer;
+    border-color: aqua;
+    height: auto;
+    width: 1.2vw;
+}
+
+.delete-icon {
+    cursor: pointer;
+    height: auto;
+    width: 1.2vw;
+}
+
+.save-icon {
+    cursor: pointer;
+    height: auto;
+    width: 1.4vw;
+    margin: 0;
+}
+
+.fade-out {
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.input-edit-student-document,
+.input-edit-student-name {
+    border: none;
+
+}
+
+.name-cell input {
+    outline: none;
+    height: 3vh;
+    width: 16vw;
+    font-size: 1vw;
+}
+
+.document-cell input {
+    outline: none;
+    height: 3vh;
+    width: 16vw;
+    font-size: 1vw;
+}
+
+.document-cell input:focus {
+    transition: outline 0.3s ease;
+}
+
+.document-cell input {
+    color: #2c2c54;
+    border: 1px solid #706fd3;
+}
+
+.name-cell input:focus {
+    transition: outline 0.3s ease;
+}
+
+.name-cell input:focus {
+    color: #2c2c54;
+    border: 1px solid #706fd3;
+}
+
+.input-edit-student-document::placeholder,
+.input-edit-student-name::placeholder {
+    color: red;
+}
