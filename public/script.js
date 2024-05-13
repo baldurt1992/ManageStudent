@@ -50,7 +50,7 @@ liElements.forEach((li) => {
       resetPagination();
     } else if (clickedLi.id === "manage-students") {
       handleSidebarClick(clickedLi.id, "LI");
-      renderPageManagStudent(currentPage);
+      renderPageManageStudent(currentPage);
       createStudenForm.style.display = "none";
       totalPage = Math.ceil(students.length / itemsPerPage);
       updatePaginationInfo(currentPage, totalPage);
@@ -206,7 +206,7 @@ function resetPagination() {
     if (
       document.getElementById("manage-students").classList.contains("selected")
     ) {
-      renderPageManagStudent(1);
+      renderPageManageStudent(1);
     }
   }
 }
@@ -222,7 +222,7 @@ function renderPageManageNotes(pageNumber) {
   createTableData(studentsToShow, "table-data");
 }
 
-function renderPageManagStudent(pageNumber) {
+function renderPageManageStudent(pageNumber) {
   const container = document.getElementById("table-data");
   container.innerHTML = "";
 
@@ -245,7 +245,7 @@ function handlePageChange(action) {
   } else if (
     document.getElementById("manage-students").classList.contains("selected")
   ) {
-    renderPageManagStudent(currentPage);
+    renderPageManageStudent(currentPage);
   }
   totalPage = Math.ceil(students.length / itemsPerPage);
   updatePaginationInfo(currentPage, totalPage);
@@ -254,4 +254,4 @@ function handlePageChange(action) {
 btnBack.addEventListener("click", () => handlePageChange("prev"));
 btnNext.addEventListener("click", () => handlePageChange("next"));
 
-export { resetPagination, renderPageManagStudent, renderPageManageNotes };
+export { resetPagination, renderPageManageStudent, renderPageManageNotes };

@@ -2,7 +2,7 @@ import icons from "../model/ModelIcons.js";
 import students from "../model/ModelStudents.js";
 import {
   resetPagination,
-  renderPageManagStudent,
+  renderPageManageStudent,
   renderPageManageNotes,
 } from "../public/script.js";
 
@@ -78,7 +78,7 @@ function deleteStudent(studentIndex) {
     } else if (
       document.getElementById("manage-students").classList.contains("selected")
     ) {
-      renderPageManagStudent(currentPage);
+      renderPageManageStudent(currentPage);
     }
   }
 }
@@ -152,13 +152,8 @@ function editStudent(studentIndex) {
       students[studentIndex].document = newDocument;
       students[studentIndex].name = newName;
 
-      renderPageManagStudent(currentPage);
+      renderPageManageStudent(currentPage);
       resetPagination();
-
-      editIcon.style.display = "inline-block";
-      deleteIcon.style.display = "inline-block";
-
-      editingStudentIndex = -1;
 
       editIcon.style.display = "inline-block";
       deleteIcon.style.display = "inline-block";
@@ -240,7 +235,6 @@ function createTableManageStudent(data, containerId, icons) {
         editIcon.src = icons.edit;
         editIcon.alt = "Editar";
         editIcon.classList.add("edit-icon");
-        editIcon.classList.add("edit-icon");
         editIcon.classList.add(`edit-icon-${studentIndex}`);
 
         editIcon.addEventListener("click", () => {
@@ -252,7 +246,6 @@ function createTableManageStudent(data, containerId, icons) {
         const deleteIcon = document.createElement("img");
         deleteIcon.src = icons.delete;
         deleteIcon.alt = "Eliminar";
-        deleteIcon.classList.add("delete-icon");
         deleteIcon.classList.add("delete-icon");
         deleteIcon.classList.add(`delete-icon-${studentIndex}`);
 
