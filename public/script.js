@@ -132,7 +132,7 @@ addStudentButton.addEventListener("click", () => {
       const noteValue = parseFloat(note.value);
       if (noteValue < 1 || noteValue > 5) {
         note.value = "";
-        note.placeholder = "Solo valores entre 0 y 5";
+        note.placeholder = "Solo valores entre 1 y 5";
         note.style.fontSize = "1vw";
         note.style.border = "1px solid red";
         isValid = false;
