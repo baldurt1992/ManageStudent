@@ -130,7 +130,7 @@ addStudentButton.addEventListener("click", () => {
       note.classList.remove("red-border");
 
       const noteValue = parseFloat(note.value);
-      if (noteValue < 0 || noteValue > 5) {
+      if (noteValue < 1 || noteValue > 5) {
         note.value = "";
         note.placeholder = "Solo valores entre 0 y 5";
         note.style.fontSize = "1vw";
